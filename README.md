@@ -1,6 +1,6 @@
 # Conekta React Native
 
-<img src="https://raw.githubusercontent.com/react-boilerplate/conekta-react-native/master/assets/banner.jpg" align="center" alt="Conekta React Native banner" />
+<img src="https://raw.githubusercontent.com/nuremx/conekta-react-native/master/assets/banner.jpg" align="center" alt="Conekta React Native banner" />
 
 ## Installation
 
