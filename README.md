@@ -1,3 +1,5 @@
+<img src="https://raw.githubusercontent.com/nuremx/conekta-react-native/master/assets/banner.jpg" align="center" alt="Conekta React Native banner" />
+
 # Conekta React Native
 
 <img src="https://raw.githubusercontent.com/nuremx/conekta-react-native/master/assets/banner.jpg" align="center" alt="Conekta React Native banner" />
