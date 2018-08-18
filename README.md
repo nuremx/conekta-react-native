@@ -57,8 +57,8 @@ card
 ## TODO
 
 - [ ] Parameters validation
+- [ ] Device registration
 - [ ] Testing
-- [ ] Ensure with the Conekta team that this is a correct implementation
 
 Please feel free to post a PR to help
 
