@@ -1,6 +1,6 @@
 {
-  "name": "@nure/conekta-react-native",
-  "version": "0.2.0",
+  "name": "conekta-react-native",
+  "version": "0.2.1",
   "description": "React Native Conekta wrapper",
   "main": "index.js",
   "scripts": {

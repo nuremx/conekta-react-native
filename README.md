@@ -4,6 +4,8 @@
 
 > **Currently iOS only**
 
+> Pure JavaScript implementation under branch `pure-javascript` (wip)
+
 ## Installation
 
 ```bash
@@ -71,4 +73,3 @@ Please feel free to post a PR to help
 ## Licence
 
 MIT
-&copy; 2018 Nure
