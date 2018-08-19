@@ -2,13 +2,17 @@
 
 # Conekta React Native [![npm version](https://badge.fury.io/js/conekta-react-native.svg)](https://badge.fury.io/js/conekta-react-native)
 
+> **Currently iOS only**
+
 ## Installation
 
 ```bash
 yarn add conekta-react-native # or npm i
 ```
 
-That's it, **no linking required**
+```bash
+react-native link conekta-react-native
+```
 
 ## Usage
 
@@ -58,8 +62,8 @@ card
 
 ## TODO
 
-- [ ] Parameters validation
-- [ ] Device registration
+- [ ] Android version
+- [ ] Optimization
 - [ ] Testing
 
 Please feel free to post a PR to help

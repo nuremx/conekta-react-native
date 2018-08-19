@@ -1,57 +1,42 @@
-import toBase64 from '../lib/toBase64'
+import { NativeModules } from 'react-native'
+
+const RCTConekta = NativeModules.Conekta
 
 class Card {
-  constructor(
-    number,
-    name,
-    cvc,
-    expMonth,
-    expYear,
-    deviceFingerprint,
-    baseURI,
-    publicKey
-  ) {
-    this.resourceURI = '/tokens'
-
+  constructor({ number, name, cvc, expMonth, expYear }) {
     this.number = number
     this.name = name
     this.cvc = cvc
     this.expMonth = expMonth
     this.expYear = expYear
-    this.deviceFingerprint = deviceFingerprint
-    this.baseURI = baseURI
-
-    this.apiKeyBase64 = toBase64(publicKey)
   }
 
-  JSONData() {
-    return JSON.stringify({
-      card: {
-        name: this.name,
-        number: this.number,
-        cvc: this.cvc,
-        exp_month: this.expMonth,
-        exp_year: this.expYear,
-        device_fingerprint: this.deviceFingerprint,
-      },
-    })
-  }
+  createToken() {
+    const { number, name, cvc, expMonth, expYear } = this
 
-  async createToken() {
-    let response = await fetch(`${this.baseURI}${this.resourceURI}`, {
-      method: 'POST',
-      headers: {
-        Authorization: `Basic ${this.apiKeyBase64}`,
-        'Content-type': 'application/json',
-        Accept: 'application/vnd.conekta-v0.3.0+json',
-        'Conekta-Client-User-Agent':
-          '{"agent":"Conekta Conekta ReactNative SDK"}',
-      },
-      body: this.JSONData(),
-    })
+    return new Promise((resolve, reject) => {
+      RCTConekta.createToken(
+        number,
+        name,
+        cvc,
+        expMonth,
+        expYear,
+        (error, stringResponse) => {
+          if (error) return reject(error)
+          try {
+            const jsonResponse = JSON.parse(stringResponse)
 
-    return response.json()
+            if (jsonResponse.object === 'error') {
+              return reject(jsonResponse)
+            }
+
+            resolve(jsonResponse)
+          } catch (error) {
+            reject(error)
+          }
+        }
+      )
+    })
   }
 }
-
 export default Card
