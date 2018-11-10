@@ -58,8 +58,6 @@ class Conekta: NSObject {
         callback: @escaping RCTResponseSenderBlock
         ) {
 
-        print("CREATING TOKEN")
-
         // You won't be on the main thread when called from JavaScript
         let deviceFingerprint = self.deviceFingerprint ?? ""
 
@@ -84,10 +82,8 @@ class Conekta: NSObject {
         // Define request
         let dataTask = session.dataTask(with: urlRequest) { (data, response, error) in
             if let data = data, let responseString = String(data: data, encoding: .utf8)  {
-                print("RESPONSE", responseString)
                 callback([nil, responseString])
             } else {
-                print("NO RESPONSE")
                 callback(["Could not get response data", nil])
             }
         }

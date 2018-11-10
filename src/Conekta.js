@@ -22,7 +22,6 @@ class Conekta {
   }
 
   createCard({ number, name, cvc, expMonth, expYear }) {
-    console.log("CREATING CARD", number, name, cvc, expMonth, expYear);
     return new Card({
       number,
       name,
