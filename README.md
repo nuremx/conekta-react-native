@@ -22,7 +22,7 @@ react-native link conekta-react-native
 
 Check that the Libraries group in Xcode have `RNConekta` and the project settings include `libRNConekta` in Linked Frameworks and Libraries. See [Manual Linking](https://facebook.github.io/react-native/docs/linking-libraries-ios).
 
-**Important**. Since this module uses Swift, and RN projects are based in Obj-C, add an empty folder inside your project, this will remove any errors. See [related Stack Overflow Post](https://stackoverflow.com/questions/50096025/it-gives-errors-when-using-swift-static-library-with-objective-c-project)
+**Important**. Since this module uses Swift, and RN projects are based in Obj-C, add an empty Swift file inside your project, this will remove related error. See [related Stack Overflow Post](https://stackoverflow.com/questions/50096025/it-gives-errors-when-using-swift-static-library-with-objective-c-project)
 
 ## Usage
 
