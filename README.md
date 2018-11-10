@@ -2,9 +2,9 @@
 
 # Conekta React Native [![npm version](https://badge.fury.io/js/conekta-react-native.svg)](https://badge.fury.io/js/conekta-react-native)
 
-> **Currently iOS only**
+> Conekta online payment processing platform on React Native
 
-> Pure JavaScript implementation under branch `pure-javascript` (wip)
+> **Currently iOS only**
 
 ## Installation
 
@@ -17,6 +17,12 @@ Link the module
 ```bash
 react-native link conekta-react-native
 ```
+
+#### iOS Notes
+
+Check that the Libraries group in Xcode have `RNConekta` and the project settings include `libRNConekta` in Linked Frameworks and Libraries. See [Manual Linking](https://facebook.github.io/react-native/docs/linking-libraries-ios).
+
+**Important**. Since this module uses Swift, and RN projects are based in Obj-C, add an empty folder inside your project, this will remove any errors. See [related Stack Overflow Post](https://stackoverflow.com/questions/50096025/it-gives-errors-when-using-swift-static-library-with-objective-c-project)
 
 ## Usage
 
@@ -44,24 +50,24 @@ try {
 Or if you prefer promises:
 
 ```javascript
-const conekta = new Conekta('key_KJysdbf6PotS2ut2')
+const conekta = new Conekta("key_KJysdbf6PotS2ut2");
 
 const card = conekta.createCard({
-  number: '4242424242424242',
-  name: 'Julian Ceballos',
-  cvc: '123',
-  expMonth: '10',
-  expYear: '2018',
-})
+  number: "4242424242424242",
+  name: "Julian Ceballos",
+  cvc: "123",
+  expMonth: "10",
+  expYear: "2018"
+});
 
 card
   .createToken()
-  .then((data) => {
-    console.log('DATA', data)
+  .then(data => {
+    console.log("DATA", data);
   })
-  .catch((error) => {
-    console.log('ERROR', error)
-  })
+  .catch(error => {
+    console.log("ERROR", error);
+  });
 ```
 
 ## TODO
@@ -70,7 +76,7 @@ card
 - [ ] Optimization
 - [ ] Testing
 
-Please feel free to post a PR to help
+Please feel free to post a PR
 
 ## Licence
 
