@@ -1,0 +1,25 @@
+{
+  "name": "conekta-react-native",
+  "version": "0.2.7",
+  "description": "React Native Conekta wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-component",
+    "react-native",
+    "ios",
+    "android",
+    "conekta"
+  ],
+  "bugs": {
+    "url": "https://github.com/nuremx/conekta-react-native/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:nuremx/conekta-react-native.git"
+  },
+  "author": "nure",
+  "license": "MIT"
+}
