@@ -6,7 +6,7 @@
 //  Copyright © 2018 Nure. All rights reserved.
 //
 
-#import <React/RCTBridgeModule.h>
+#import <React/RCTBridge.h>
 
 @interface RCT_EXTERN_REMAP_MODULE(RNConekta, Conekta, NSObject)
 

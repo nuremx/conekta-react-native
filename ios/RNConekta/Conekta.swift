@@ -3,7 +3,6 @@
 //  conekta-react-native
 //
 //  Created by César Guadarrama on 8/18/18.
-//  Copyright © 2018 Nure. All rights reserved.
 //
 
 import Foundation

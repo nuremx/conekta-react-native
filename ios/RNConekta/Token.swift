@@ -3,7 +3,6 @@
 //  RCTConekta
 //
 //  Created by César Guadarrama on 8/19/18.
-//  Copyright © 2018 Nure. All rights reserved.
 //
 
 import Foundation
@@ -11,7 +10,7 @@ import Foundation
 class Token {
     private let resourceURI = "/tokens"
     private let publicKey: String
-    
+
     private let card: Card
 
     private lazy var apiKeyBase64: String = {
